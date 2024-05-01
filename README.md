@@ -274,6 +274,9 @@ Realizar un programa que seleccionar en pantalla poder realizar cuatro cálculos
 Desarrolle el siguiente ejercicio práctico sólo con la herramienta visual Windows Builder (Eclipse), y sin desarrollo de programación, (copiar el desarrollo del código que entrega la herramienta junto con una imagen adjunta al ejercicio):
 Desarrolle la interfaz para una Calculadora científica tal como se presenta en la imagen que se ve a continuación.
 
+![Calculadora Ejemplo](https://raw.githubusercontent.com/Fica-Millan/java_IntegracionDeProgramacion_IRSO_2023/main/calculadora.png)
+
+
 ### Ejercicio 4:
 Desarrolle el siguiente ejercicio práctico sólo con la herramienta visual Windows Builder (Eclipse), y sin desarrollo de programación, (copiar el desarrollo del código que entrega la herramienta junto con una imagen adjunta al ejercicio):
 Desarrolle la interfaz para una agencia de alquiler de bicicletas, en donde deberá tener un menú de ventana con cuatro opciones y dentro de cada una:
