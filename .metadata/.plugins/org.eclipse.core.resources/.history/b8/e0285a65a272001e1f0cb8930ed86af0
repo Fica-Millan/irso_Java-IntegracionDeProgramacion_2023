@@ -1,0 +1,191 @@
+package tp_obligatorio_03;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+
+public class ej_04_AlquilerBicis extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JMenuBar menuBar;
+	private JMenu mnNewMenu;
+	private JMenu mnNewMenu_1;
+	private JMenu mnNewMenu_2;
+	private JMenu mnNewMenu_3;
+	private JMenuItem mntmNewMenuItem;
+	private JMenuItem mntmNewMenuItem_1;
+	private JMenuItem mntmNewMenuItem_2;
+	private JMenuItem mntmNewMenuItem_3;
+	private JMenuItem mntmNewMenuItem_4;
+	private JMenuItem mntmNewMenuItem_5;
+	private JMenuItem mntmNewMenuItem_7;
+	private JMenuItem mntmNewMenuItem_8;
+	private JMenuItem mntmNewMenuItem_9;
+	private JMenuItem mntmNewMenuItem_6;
+	private JMenuItem mntmNewMenuItem_10;
+	private JMenuItem mntmNewMenuItem_11;
+	private JMenuItem mntmNewMenuItem_12;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ej_04_AlquilerBicis frame = new ej_04_AlquilerBicis();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ej_04_AlquilerBicis() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 608, 509);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(getMenuBar_1());
+		contentPane.add(getMntmNewMenuItem_12());
+	}
+	private JMenuBar getMenuBar_1() {
+		if (menuBar == null) {
+			menuBar = new JMenuBar();
+			menuBar.setBounds(0, 0, 582, 22);
+			menuBar.add(getMnNewMenu());
+			menuBar.add(getMnNewMenu_1());
+			menuBar.add(getMnNewMenu_2());
+			menuBar.add(getMnNewMenu_3());
+		}
+		return menuBar;
+	}
+	private JMenu getMnNewMenu() {
+		if (mnNewMenu == null) {
+			mnNewMenu = new JMenu("Inicio");
+		}
+		return mnNewMenu;
+	}
+	private JMenu getMnNewMenu_1() {
+		if (mnNewMenu_1 == null) {
+			mnNewMenu_1 = new JMenu("Ingreso de Alquiler");
+			mnNewMenu_1.add(getMntmNewMenuItem());
+			mnNewMenu_1.add(getMntmNewMenuItem_1());
+			mnNewMenu_1.add(getMntmNewMenuItem_2());
+			mnNewMenu_1.add(getMntmNewMenuItem_3());
+			mnNewMenu_1.add(getMntmNewMenuItem_4());
+			mnNewMenu_1.add(getMntmNewMenuItem_5());
+		}
+		return mnNewMenu_1;
+	}
+	private JMenu getMnNewMenu_2() {
+		if (mnNewMenu_2 == null) {
+			mnNewMenu_2 = new JMenu("Egreso de Alquiler");
+			mnNewMenu_2.add(getMntmNewMenuItem_7());
+			mnNewMenu_2.add(getMntmNewMenuItem_8());
+			mnNewMenu_2.add(getMntmNewMenuItem_9());
+		}
+		return mnNewMenu_2;
+	}
+	private JMenu getMnNewMenu_3() {
+		if (mnNewMenu_3 == null) {
+			mnNewMenu_3 = new JMenu("Facturacion");
+			mnNewMenu_3.add(getMntmNewMenuItem_6());
+			mnNewMenu_3.add(getMntmNewMenuItem_10());
+			mnNewMenu_3.add(getMntmNewMenuItem_11());
+		}
+		return mnNewMenu_3;
+	}
+	private JMenuItem getMntmNewMenuItem() {
+		if (mntmNewMenuItem == null) {
+			mntmNewMenuItem = new JMenuItem("DNI");
+		}
+		return mntmNewMenuItem;
+	}
+	private JMenuItem getMntmNewMenuItem_1() {
+		if (mntmNewMenuItem_1 == null) {
+			mntmNewMenuItem_1 = new JMenuItem("Nombres");
+		}
+		return mntmNewMenuItem_1;
+	}
+	private JMenuItem getMntmNewMenuItem_2() {
+		if (mntmNewMenuItem_2 == null) {
+			mntmNewMenuItem_2 = new JMenuItem("Apellidos");
+		}
+		return mntmNewMenuItem_2;
+	}
+	private JMenuItem getMntmNewMenuItem_3() {
+		if (mntmNewMenuItem_3 == null) {
+			mntmNewMenuItem_3 = new JMenuItem("Ingreso fecha");
+		}
+		return mntmNewMenuItem_3;
+	}
+	private JMenuItem getMntmNewMenuItem_4() {
+		if (mntmNewMenuItem_4 == null) {
+			mntmNewMenuItem_4 = new JMenuItem("Ingreso hora");
+		}
+		return mntmNewMenuItem_4;
+	}
+	private JMenuItem getMntmNewMenuItem_5() {
+		if (mntmNewMenuItem_5 == null) {
+			mntmNewMenuItem_5 = new JMenuItem("Numero de rodado");
+		}
+		return mntmNewMenuItem_5;
+	}
+	private JMenuItem getMntmNewMenuItem_7() {
+		if (mntmNewMenuItem_7 == null) {
+			mntmNewMenuItem_7 = new JMenuItem("Numero de rodado");
+		}
+		return mntmNewMenuItem_7;
+	}
+	private JMenuItem getMntmNewMenuItem_8() {
+		if (mntmNewMenuItem_8 == null) {
+			mntmNewMenuItem_8 = new JMenuItem("Egreso fecha");
+		}
+		return mntmNewMenuItem_8;
+	}
+	private JMenuItem getMntmNewMenuItem_9() {
+		if (mntmNewMenuItem_9 == null) {
+			mntmNewMenuItem_9 = new JMenuItem("Egreso hora");
+		}
+		return mntmNewMenuItem_9;
+	}
+	private JMenuItem getMntmNewMenuItem_6() {
+		if (mntmNewMenuItem_6 == null) {
+			mntmNewMenuItem_6 = new JMenuItem("Monto por hora");
+		}
+		return mntmNewMenuItem_6;
+	}
+	private JMenuItem getMntmNewMenuItem_10() {
+		if (mntmNewMenuItem_10 == null) {
+			mntmNewMenuItem_10 = new JMenuItem("Sumatoria de horas");
+		}
+		return mntmNewMenuItem_10;
+	}
+	private JMenuItem getMntmNewMenuItem_11() {
+		if (mntmNewMenuItem_11 == null) {
+			mntmNewMenuItem_11 = new JMenuItem("Monto total a facturar");
+		}
+		return mntmNewMenuItem_11;
+	}
+	private JMenuItem getMntmNewMenuItem_12() {
+		if (mntmNewMenuItem_12 == null) {
+			mntmNewMenuItem_12 = new JMenuItem("Descubre la libertad de moverte por la ciudad de una manera saludable, ecológica y divertida. Con nuestra amplia flota de bicicletas disponibles en puntos convenientes en toda la ciudad, el alquiler de bicicletas nunca ha sido tan sencillo.");
+			mntmNewMenuItem_12.setBounds(84, 48, 379, 164);
+		}
+		return mntmNewMenuItem_12;
+	}
+}

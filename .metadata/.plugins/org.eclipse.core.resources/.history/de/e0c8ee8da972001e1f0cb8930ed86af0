@@ -1,0 +1,253 @@
+package tp_obligatorio_03;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
+import java.awt.Insets;
+import java.awt.Dimension;
+import java.awt.Component;
+import javax.swing.Box;
+import java.awt.Cursor;
+import javax.swing.SwingConstants;
+
+public class ej_03_Calculadora extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JPanel panel;
+	private JButton btn_limpiarMemoria;
+	private JButton btn_sumarMemoria;
+	private JButton btn_restarMemoria;
+	private JButton btn_recuperarMemoria;
+	private JButton btn_limpiar;
+	private JButton btn_simbolo;
+	private JButton btn_dividir;
+	private JButton btn_multiplicar;
+	private JButton btn_7;
+	private JButton btn_8;
+	private JButton btn_9;
+	private JButton btn_resta;
+	private JButton btn_4;
+	private JButton btn_5;
+	private JButton btn_6;
+	private JButton btn_suma;
+	private JButton btn_1;
+	private JButton btn_2;
+	private JButton btn_3;
+	private JButton btn_igual;
+	private JButton btn_0;
+	private JButton btn_punto;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ej_03_Calculadora frame = new ej_03_Calculadora();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ej_03_Calculadora() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 310, 464);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.add(getPanel_1(), BorderLayout.CENTER);
+		contentPane.add(getTextField(), BorderLayout.NORTH);
+	}
+	private JPanel getPanel_1() {
+		if (panel == null) {
+			panel = new JPanel();
+			panel.setLayout(new GridLayout(6, 4, 0, 0));
+			panel.add(getBtn_limpiarMemoria());
+			panel.add(getBtn_sumarMemoria());
+			panel.add(getBtn_restarMemoria());
+			panel.add(getBtn_recuperarMemoria());
+			panel.add(getBtn_limpiar());
+			panel.add(getBtn_simbolo());
+			panel.add(getBtn_dividir());
+			panel.add(getBtn_multiplicar());
+			panel.add(getBtn_7());
+			panel.add(getBtn_8());
+			panel.add(getBtn_9());
+			panel.add(getBtn_resta());
+			panel.add(getBtn_4());
+			panel.add(getBtn_5());
+			panel.add(getBtn_6());
+			panel.add(getBtn_suma());
+			panel.add(getBtn_1());
+			panel.add(getBtn_2());
+			panel.add(getBtn_3());
+			panel.add(getBtn_igual());
+			panel.add(getBtn_0());
+			panel.add(getBtn_punto());
+		}
+		return panel;
+	}
+	private JButton getBtn_limpiarMemoria() {
+		if (btn_limpiarMemoria == null) {
+			btn_limpiarMemoria = new JButton("MC");
+			btn_limpiarMemoria.setBorder(UIManager.getBorder("ToggleButton.border"));
+		}
+		return btn_limpiarMemoria;
+	}
+	private JButton getBtn_sumarMemoria() {
+		if (btn_sumarMemoria == null) {
+			btn_sumarMemoria = new JButton("M+");
+		}
+		return btn_sumarMemoria;
+	}
+	private JButton getBtn_restarMemoria() {
+		if (btn_restarMemoria == null) {
+			btn_restarMemoria = new JButton("M-");
+		}
+		return btn_restarMemoria;
+	}
+	private JButton getBtn_recuperarMemoria() {
+		if (btn_recuperarMemoria == null) {
+			btn_recuperarMemoria = new JButton("MR");
+		}
+		return btn_recuperarMemoria;
+	}
+	private JButton getBtn_limpiar() {
+		if (btn_limpiar == null) {
+			btn_limpiar = new JButton("C");
+		}
+		return btn_limpiar;
+	}
+	private JButton getBtn_simbolo() {
+		if (btn_simbolo == null) {
+			btn_simbolo = new JButton("±");
+		}
+		return btn_simbolo;
+	}
+	private JButton getBtn_dividir() {
+		if (btn_dividir == null) {
+			btn_dividir = new JButton("÷");
+		}
+		return btn_dividir;
+	}
+	private JButton getBtn_multiplicar() {
+		if (btn_multiplicar == null) {
+			btn_multiplicar = new JButton("X");
+		}
+		return btn_multiplicar;
+	}
+	private JButton getBtn_7() {
+		if (btn_7 == null) {
+			btn_7 = new JButton("7");
+		}
+		return btn_7;
+	}
+	private JButton getBtn_8() {
+		if (btn_8 == null) {
+			btn_8 = new JButton("8");
+		}
+		return btn_8;
+	}
+	private JButton getBtn_9() {
+		if (btn_9 == null) {
+			btn_9 = new JButton("9");
+		}
+		return btn_9;
+	}
+	private JButton getBtn_resta() {
+		if (btn_resta == null) {
+			btn_resta = new JButton("-");
+		}
+		return btn_resta;
+	}
+	private JButton getBtn_4() {
+		if (btn_4 == null) {
+			btn_4 = new JButton("4");
+		}
+		return btn_4;
+	}
+	private JButton getBtn_5() {
+		if (btn_5 == null) {
+			btn_5 = new JButton("5");
+		}
+		return btn_5;
+	}
+	private JButton getBtn_6() {
+		if (btn_6 == null) {
+			btn_6 = new JButton("6");
+		}
+		return btn_6;
+	}
+	private JButton getBtn_suma() {
+		if (btn_suma == null) {
+			btn_suma = new JButton("+");
+		}
+		return btn_suma;
+	}
+	private JButton getBtn_1() {
+		if (btn_1 == null) {
+			btn_1 = new JButton("1");
+		}
+		return btn_1;
+	}
+	private JButton getBtn_2() {
+		if (btn_2 == null) {
+			btn_2 = new JButton("2");
+		}
+		return btn_2;
+	}
+	private JButton getBtn_3() {
+		if (btn_3 == null) {
+			btn_3 = new JButton("3");
+		}
+		return btn_3;
+	}
+	private JButton getBtn_igual() {
+		if (btn_igual == null) {
+			btn_igual = new JButton("=");
+		}
+		return btn_igual;
+	}
+	private JButton getBtn_0() {
+		if (btn_0 == null) {
+			btn_0 = new JButton("0");
+			btn_0.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+			btn_0.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		}
+		return btn_0;
+	}
+	private JButton getBtn_punto() {
+		if (btn_punto == null) {
+			btn_punto = new JButton(".");
+		}
+		return btn_punto;
+	}
+	private JTextField getTextField() {
+		if (textField == null) {
+			textField = new JTextField();
+			textField.setColumns(10);
+		}
+		return textField;
+	}
+}

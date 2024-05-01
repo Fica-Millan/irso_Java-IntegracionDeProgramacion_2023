@@ -1,0 +1,65 @@
+/*Realizar un programa que permita leer de teclado 20 variables decimales que sean mayores e iguales a -100 y menores de -8, almacenarlas dentro de un Vector en POO, para luego obtener el valor máximo y mínimo de estos. El resultado deberá imprimirse por pantalla. Aplicar POO en el desarrollo del vector, y también Encapsulamiento en la carga de los valores al vector.*/
+
+package programas;
+
+import java.util.Scanner;
+
+public class Ejercicio_07 {
+
+	private int[] vector;
+	private int valorMaximo;
+	private int valorMinimo;
+
+	// Constructor para inicializar el vector con un tamaño dado
+	public Ejercicio_07(int tamano) {
+		this.vector = new int[tamano];
+		this.valorMaximo = Integer.MIN_VALUE;
+		this.valorMinimo = Integer.MAX_VALUE;
+	}
+
+	// Método para cargar valores al vector con encapsulamiento
+	public void cargarValores() {
+		Scanner scanner = new Scanner(System.in);
+
+		for (int i = 0; i < vector.length; i++) {
+			System.out.print("Ingrese un número entre 28 y 555 para la posición " + (i + 1) + ": ");
+			int numero = scanner.nextInt();
+
+			// Validar que el número esté en el rango especificado
+			while (numero <= 28 || numero >= 555) {
+				System.out.println("Error: Ingrese un número entre 28 y 555.");
+				System.out.print("Ingrese un número para la posición " + (i + 1) + ": ");
+				numero = scanner.nextInt();
+			}
+
+			vector[i] = numero;
+
+			// Actualizar el valor máximo y el valor mínimo
+			valorMaximo = Math.max(valorMaximo, numero);
+			valorMinimo = Math.min(valorMinimo, numero);
+		}
+
+		// Cerrar el scanner al finalizar la entrada de datos
+		scanner.close();
+	}
+
+	// Método para mostrar la información del vector y los cálculos
+	public void mostrarInformacion() {
+		System.out.println("Valores del vector:");
+		for (int i = 0; i < vector.length; i++) {
+			System.out.print(vector[i] + "\t");
+		}
+
+		System.out.println("\nValor Máximo: " + valorMaximo);
+		System.out.println("Valor Mínimo: " + valorMinimo);
+	}
+
+	public static void main(String[] args) {
+		// Crear un vector de 9 elementos y cargar valores
+		Ejercicio_07 vectorOperaciones = new Ejercicio_07(9);
+		vectorOperaciones.cargarValores();
+
+		// Mostrar la información del vector y los cálculos
+		vectorOperaciones.mostrarInformacion();
+	}
+}

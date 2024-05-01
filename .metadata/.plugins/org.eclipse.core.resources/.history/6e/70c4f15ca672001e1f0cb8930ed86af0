@@ -1,0 +1,407 @@
+package tp_obligatorio_03;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
+import java.awt.Insets;
+import java.awt.Dimension;
+import java.awt.Component;
+import javax.swing.Box;
+import java.awt.Cursor;
+import javax.swing.SwingConstants;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import javax.swing.border.CompoundBorder;
+
+public class ej_03_Calculadora2 extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JPanel panel;
+	private JButton btn_limpiarMemoria;
+	private JButton btn_sumarMemoria;
+	private JButton btn_restarMemoria;
+	private JButton btn_recuperarMemoria;
+	private JButton btn_limpiar;
+	private JButton btn_simbolo;
+	private JButton btn_dividir;
+	private JButton btn_multiplicar;
+	private JButton btn_7;
+	private JButton btn_8;
+	private JButton btn_9;
+	private JButton btn_resta;
+	private JButton btn_4;
+	private JButton btn_5;
+	private JButton btn_6;
+	private JButton btn_suma;
+	private JButton btn_1;
+	private JButton btn_2;
+	private JButton btn_3;
+	private JButton btn_igual;
+	private JButton btn_0;
+	private JButton btn_punto;
+	private JTextField textField;
+	private JPanel panelM;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ej_03_Calculadora2 frame = new ej_03_Calculadora2();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ej_03_Calculadora2() {
+		setTitle("Calc");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 283, 324);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		GridBagLayout gbl_contentPane = new GridBagLayout();
+		gbl_contentPane.rowWeights = new double[]{1.0, 1.0};
+		gbl_contentPane.columnWeights = new double[]{1.0};
+		contentPane.setLayout(gbl_contentPane);
+		GridBagConstraints gbc_textField = new GridBagConstraints();
+		gbc_textField.fill = GridBagConstraints.BOTH;
+		gbc_textField.insets = new Insets(4, 4, 4, 4);
+		gbc_textField.gridx = 0;
+		gbc_textField.gridy = 0;
+		contentPane.add(getTextField(), gbc_textField);
+		GridBagConstraints gbc_panel = new GridBagConstraints();
+		gbc_panel.fill = GridBagConstraints.BOTH;
+		gbc_panel.gridx = 0;
+		gbc_panel.gridy = 1;
+		contentPane.add(getPanel_1(), gbc_panel);
+	}
+	private JPanel getPanel_1() {
+		if (panel == null) {
+			panel = new JPanel();
+			GridBagLayout gbl_panel = new GridBagLayout();
+			gbl_panel.rowWeights = new double[]{1.0};
+			gbl_panel.columnWeights = new double[]{1.0};
+
+			panel.setLayout(gbl_panel);
+			GridBagConstraints gbc_panelM = new GridBagConstraints();
+			gbc_panelM.fill = GridBagConstraints.BOTH;
+			gbc_panelM.insets = new Insets(4, 4, 4, 4);
+			gbc_panelM.gridx = 0;
+			gbc_panelM.gridy = 0;
+			panel.add(getPanel_1_1(), gbc_panelM);
+		}
+		return panel;
+	}
+	private JButton getBtn_limpiarMemoria() {
+		if (btn_limpiarMemoria == null) {
+			btn_limpiarMemoria = new JButton("MC");
+			btn_limpiarMemoria.setBorder(new CompoundBorder(new LineBorder(new Color(0, 0, 0), 1, true), new LineBorder(new Color(0, 0, 0), 1, true)));
+		}
+		return btn_limpiarMemoria;
+	}
+	private JButton getBtn_sumarMemoria() {
+		if (btn_sumarMemoria == null) {
+			btn_sumarMemoria = new JButton("M+");
+		}
+		return btn_sumarMemoria;
+	}
+	private JButton getBtn_restarMemoria() {
+		if (btn_restarMemoria == null) {
+			btn_restarMemoria = new JButton("M-");
+		}
+		return btn_restarMemoria;
+	}
+	private JButton getBtn_recuperarMemoria() {
+		if (btn_recuperarMemoria == null) {
+			btn_recuperarMemoria = new JButton("MR");
+		}
+		return btn_recuperarMemoria;
+	}
+	private JButton getBtn_limpiar() {
+		if (btn_limpiar == null) {
+			btn_limpiar = new JButton("C");
+			btn_limpiar.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		}
+		return btn_limpiar;
+	}
+	private JButton getBtn_simbolo() {
+		if (btn_simbolo == null) {
+			btn_simbolo = new JButton("±");
+		}
+		return btn_simbolo;
+	}
+	private JButton getBtn_dividir() {
+		if (btn_dividir == null) {
+			btn_dividir = new JButton("÷");
+		}
+		return btn_dividir;
+	}
+	private JButton getBtn_multiplicar() {
+		if (btn_multiplicar == null) {
+			btn_multiplicar = new JButton("X");
+		}
+		return btn_multiplicar;
+	}
+	private JButton getBtn_7() {
+		if (btn_7 == null) {
+			btn_7 = new JButton("7");
+		}
+		return btn_7;
+	}
+	private JButton getBtn_8() {
+		if (btn_8 == null) {
+			btn_8 = new JButton("8");
+		}
+		return btn_8;
+	}
+	private JButton getBtn_9() {
+		if (btn_9 == null) {
+			btn_9 = new JButton("9");
+		}
+		return btn_9;
+	}
+	private JButton getBtn_resta() {
+		if (btn_resta == null) {
+			btn_resta = new JButton("-");
+		}
+		return btn_resta;
+	}
+	private JButton getBtn_4() {
+		if (btn_4 == null) {
+			btn_4 = new JButton("4");
+		}
+		return btn_4;
+	}
+	private JButton getBtn_5() {
+		if (btn_5 == null) {
+			btn_5 = new JButton("5");
+		}
+		return btn_5;
+	}
+	private JButton getBtn_6() {
+		if (btn_6 == null) {
+			btn_6 = new JButton("6");
+		}
+		return btn_6;
+	}
+	private JButton getBtn_suma() {
+		if (btn_suma == null) {
+			btn_suma = new JButton("+");
+		}
+		return btn_suma;
+	}
+	private JButton getBtn_1() {
+		if (btn_1 == null) {
+			btn_1 = new JButton("1");
+		}
+		return btn_1;
+	}
+	private JButton getBtn_2() {
+		if (btn_2 == null) {
+			btn_2 = new JButton("2");
+		}
+		return btn_2;
+	}
+	private JButton getBtn_3() {
+		if (btn_3 == null) {
+			btn_3 = new JButton("3");
+		}
+		return btn_3;
+	}
+	private JButton getBtn_igual() {
+		if (btn_igual == null) {
+			btn_igual = new JButton("=");
+		}
+		return btn_igual;
+	}
+	private JButton getBtn_0() {
+		if (btn_0 == null) {
+			btn_0 = new JButton("0");
+			btn_0.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+			btn_0.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		}
+		return btn_0;
+	}
+	private JButton getBtn_punto() {
+		if (btn_punto == null) {
+			btn_punto = new JButton(".");
+		}
+		return btn_punto;
+	}
+	private JTextField getTextField() {
+		if (textField == null) {
+			textField = new JTextField();
+			textField.setColumns(10);
+		}
+		return textField;
+	}
+	private JPanel getPanel_1_1() {
+		if (panelM == null) {
+			panelM = new JPanel();
+			GridBagLayout gbl_panelM = new GridBagLayout();
+			gbl_panelM.columnWidths = new int[] {0};
+			gbl_panelM.rowHeights = new int[] {0, 0, 0, 0, 0, 0};
+			gbl_panelM.columnWeights = new double[]{1.0, 1.0, 1.0, 1.0};
+			gbl_panelM.rowWeights = new double[]{1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
+			panelM.setLayout(gbl_panelM);
+			GridBagConstraints gbc_btn_limpiarMemoria = new GridBagConstraints();
+			gbc_btn_limpiarMemoria.fill = GridBagConstraints.BOTH;
+			gbc_btn_limpiarMemoria.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_limpiarMemoria.gridx = 0;
+			gbc_btn_limpiarMemoria.gridy = 0;
+			panelM.add(getBtn_limpiarMemoria(), gbc_btn_limpiarMemoria);
+			GridBagConstraints gbc_btn_sumarMemoria = new GridBagConstraints();
+			gbc_btn_sumarMemoria.fill = GridBagConstraints.BOTH;
+			gbc_btn_sumarMemoria.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_sumarMemoria.gridx = 1;
+			gbc_btn_sumarMemoria.gridy = 0;
+			panelM.add(getBtn_sumarMemoria(), gbc_btn_sumarMemoria);
+			GridBagConstraints gbc_btn_restarMemoria = new GridBagConstraints();
+			gbc_btn_restarMemoria.fill = GridBagConstraints.BOTH;
+			gbc_btn_restarMemoria.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_restarMemoria.gridx = 2;
+			gbc_btn_restarMemoria.gridy = 0;
+			panelM.add(getBtn_restarMemoria(), gbc_btn_restarMemoria);
+			GridBagConstraints gbc_btn_recuperarMemoria = new GridBagConstraints();
+			gbc_btn_recuperarMemoria.fill = GridBagConstraints.BOTH;
+			gbc_btn_recuperarMemoria.gridx = 3;
+			gbc_btn_recuperarMemoria.gridy = 0;
+			gbc_btn_recuperarMemoria.insets = new Insets(4, 4, 4, 4);
+			panelM.add(getBtn_recuperarMemoria(), gbc_btn_recuperarMemoria);
+			GridBagConstraints gbc_btn_limpiar = new GridBagConstraints();
+			gbc_btn_limpiar.fill = GridBagConstraints.BOTH;
+			gbc_btn_limpiar.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_limpiar.gridx = 0;
+			gbc_btn_limpiar.gridy = 1;
+			panelM.add(getBtn_limpiar(), gbc_btn_limpiar);
+			GridBagConstraints gbc_btn_simbolo = new GridBagConstraints();
+			gbc_btn_simbolo.fill = GridBagConstraints.BOTH;
+			gbc_btn_simbolo.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_simbolo.gridx = 1;
+			gbc_btn_simbolo.gridy = 1;
+			panelM.add(getBtn_simbolo(), gbc_btn_simbolo);
+			GridBagConstraints gbc_btn_dividir = new GridBagConstraints();
+			gbc_btn_dividir.fill = GridBagConstraints.BOTH;
+			gbc_btn_dividir.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_dividir.gridx = 2;
+			gbc_btn_dividir.gridy = 1;
+			panelM.add(getBtn_dividir(), gbc_btn_dividir);
+			GridBagConstraints gbc_btn_multiplicar = new GridBagConstraints();
+			gbc_btn_multiplicar.fill = GridBagConstraints.BOTH;
+			gbc_btn_multiplicar.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_multiplicar.gridx = 3;
+			gbc_btn_multiplicar.gridy = 1;
+			panelM.add(getBtn_multiplicar(), gbc_btn_multiplicar);
+			GridBagConstraints gbc_btn_7 = new GridBagConstraints();
+			gbc_btn_7.fill = GridBagConstraints.BOTH;
+			gbc_btn_7.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_7.gridx = 0;
+			gbc_btn_7.gridy = 2;
+			panelM.add(getBtn_7(), gbc_btn_7);
+			GridBagConstraints gbc_btn_8 = new GridBagConstraints();
+			gbc_btn_8.fill = GridBagConstraints.BOTH;
+			gbc_btn_8.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_8.gridx = 1;
+			gbc_btn_8.gridy = 2;
+			panelM.add(getBtn_8(), gbc_btn_8);
+			GridBagConstraints gbc_btn_9 = new GridBagConstraints();
+			gbc_btn_9.fill = GridBagConstraints.BOTH;
+			gbc_btn_9.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_9.gridx = 2;
+			gbc_btn_9.gridy = 2;
+			panelM.add(getBtn_9(), gbc_btn_9);
+			GridBagConstraints gbc_btn_resta = new GridBagConstraints();
+			gbc_btn_resta.fill = GridBagConstraints.BOTH;
+			gbc_btn_resta.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_resta.gridx = 3;
+			gbc_btn_resta.gridy = 2;
+			panelM.add(getBtn_resta(), gbc_btn_resta);
+			GridBagConstraints gbc_btn_4 = new GridBagConstraints();
+			gbc_btn_4.fill = GridBagConstraints.BOTH;
+			gbc_btn_4.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_4.gridx = 0;
+			gbc_btn_4.gridy = 3;
+			panelM.add(getBtn_4(), gbc_btn_4);
+			GridBagConstraints gbc_btn_5 = new GridBagConstraints();
+			gbc_btn_5.fill = GridBagConstraints.BOTH;
+			gbc_btn_5.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_5.gridx = 1;
+			gbc_btn_5.gridy = 3;
+			panelM.add(getBtn_5(), gbc_btn_5);
+			GridBagConstraints gbc_btn_6 = new GridBagConstraints();
+			gbc_btn_6.fill = GridBagConstraints.BOTH;
+			gbc_btn_6.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_6.gridx = 2;
+			gbc_btn_6.gridy = 3;
+			panelM.add(getBtn_6(), gbc_btn_6);
+			GridBagConstraints gbc_btn_suma = new GridBagConstraints();
+			gbc_btn_suma.fill = GridBagConstraints.BOTH;
+			gbc_btn_suma.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_suma.gridx = 3;
+			gbc_btn_suma.gridy = 3;
+			panelM.add(getBtn_suma(), gbc_btn_suma);
+			GridBagConstraints gbc_btn_1 = new GridBagConstraints();
+			gbc_btn_1.fill = GridBagConstraints.BOTH;
+			gbc_btn_1.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_1.gridx = 0;
+			gbc_btn_1.gridy = 4;
+			panelM.add(getBtn_1(), gbc_btn_1);
+			GridBagConstraints gbc_btn_2 = new GridBagConstraints();
+			gbc_btn_2.fill = GridBagConstraints.BOTH;
+			gbc_btn_2.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_2.gridx = 1;
+			gbc_btn_2.gridy = 4;
+			panelM.add(getBtn_2(), gbc_btn_2);
+			GridBagConstraints gbc_btn_3 = new GridBagConstraints();
+			gbc_btn_3.fill = GridBagConstraints.BOTH;
+			gbc_btn_3.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_3.gridx = 2;
+			gbc_btn_3.gridy = 4;
+			panelM.add(getBtn_3(), gbc_btn_3);
+			GridBagConstraints gbc_btn_igual = new GridBagConstraints();
+			gbc_btn_igual.gridheight = 2;
+			gbc_btn_igual.fill = GridBagConstraints.BOTH;
+			gbc_btn_igual.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_igual.gridx = 3;
+			gbc_btn_igual.gridy = 4;
+			panelM.add(getBtn_igual(), gbc_btn_igual);
+			GridBagConstraints gbc_btn_0 = new GridBagConstraints();
+			gbc_btn_0.gridwidth = 2;
+			gbc_btn_0.fill = GridBagConstraints.BOTH;
+			gbc_btn_0.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_0.gridx = 0;
+			gbc_btn_0.gridy = 5;
+			panelM.add(getBtn_0(), gbc_btn_0);
+			GridBagConstraints gbc_btn_punto = new GridBagConstraints();
+			gbc_btn_punto.fill = GridBagConstraints.BOTH;
+			gbc_btn_punto.insets = new Insets(4, 4, 4, 4);
+			gbc_btn_punto.gridx = 2;
+			gbc_btn_punto.gridy = 5;
+			panelM.add(getBtn_punto(), gbc_btn_punto);
+		}
+		return panelM;
+	}
+}

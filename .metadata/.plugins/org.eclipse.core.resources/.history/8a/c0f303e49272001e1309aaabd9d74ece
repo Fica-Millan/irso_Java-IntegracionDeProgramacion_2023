@@ -1,0 +1,246 @@
+package tp_obligatorio_03;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
+
+public class ej_03_Calculadora extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JPanel panel;
+	private JButton btnNewButton;
+	private JButton btnNewButton_1;
+	private JButton btnNewButton_2;
+	private JButton btnNewButton_3;
+	private JButton btnNewButton_4;
+	private JButton btnNewButton_5;
+	private JButton btnNewButton_6;
+	private JButton btnNewButton_7;
+	private JButton btnNewButton_8;
+	private JButton btnNewButton_9;
+	private JButton btnNewButton_10;
+	private JButton btnNewButton_11;
+	private JButton btnNewButton_12;
+	private JButton btnNewButton_13;
+	private JButton btnNewButton_14;
+	private JButton btnNewButton_15;
+	private JButton btnNewButton_16;
+	private JButton btnNewButton_17;
+	private JButton btnNewButton_18;
+	private JButton btnNewButton_19;
+	private JButton btnNewButton_20;
+	private JButton btnNewButton_21;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ej_03_Calculadora frame = new ej_03_Calculadora();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ej_03_Calculadora() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 310, 464);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.add(getPanel_1(), BorderLayout.CENTER);
+		contentPane.add(getTextField(), BorderLayout.NORTH);
+	}
+	private JPanel getPanel_1() {
+		if (panel == null) {
+			panel = new JPanel();
+			panel.setLayout(new GridLayout(6, 4, 0, 0));
+			panel.add(getBtnNewButton());
+			panel.add(getBtnNewButton_1());
+			panel.add(getBtnNewButton_2());
+			panel.add(getBtnNewButton_3());
+			panel.add(getBtnNewButton_4());
+			panel.add(getBtnNewButton_5());
+			panel.add(getBtnNewButton_6());
+			panel.add(getBtnNewButton_7());
+			panel.add(getBtnNewButton_8());
+			panel.add(getBtnNewButton_9());
+			panel.add(getBtnNewButton_10());
+			panel.add(getBtnNewButton_11());
+			panel.add(getBtnNewButton_12());
+			panel.add(getBtnNewButton_13());
+			panel.add(getBtnNewButton_14());
+			panel.add(getBtnNewButton_15());
+			panel.add(getBtnNewButton_16());
+			panel.add(getBtnNewButton_17());
+			panel.add(getBtnNewButton_18());
+			panel.add(getBtnNewButton_19());
+			panel.add(getBtnNewButton_20());
+			panel.add(getBtnNewButton_21());
+		}
+		return panel;
+	}
+	private JButton getBtnNewButton() {
+		if (btnNewButton == null) {
+			btnNewButton = new JButton("MC");
+			btnNewButton.setBorder(UIManager.getBorder("ToggleButton.border"));
+		}
+		return btnNewButton;
+	}
+	private JButton getBtnNewButton_1() {
+		if (btnNewButton_1 == null) {
+			btnNewButton_1 = new JButton("M+");
+		}
+		return btnNewButton_1;
+	}
+	private JButton getBtnNewButton_2() {
+		if (btnNewButton_2 == null) {
+			btnNewButton_2 = new JButton("M-");
+		}
+		return btnNewButton_2;
+	}
+	private JButton getBtnNewButton_3() {
+		if (btnNewButton_3 == null) {
+			btnNewButton_3 = new JButton("MR");
+		}
+		return btnNewButton_3;
+	}
+	private JButton getBtnNewButton_4() {
+		if (btnNewButton_4 == null) {
+			btnNewButton_4 = new JButton("C");
+		}
+		return btnNewButton_4;
+	}
+	private JButton getBtnNewButton_5() {
+		if (btnNewButton_5 == null) {
+			btnNewButton_5 = new JButton("+-");
+		}
+		return btnNewButton_5;
+	}
+	private JButton getBtnNewButton_6() {
+		if (btnNewButton_6 == null) {
+			btnNewButton_6 = new JButton("%");
+		}
+		return btnNewButton_6;
+	}
+	private JButton getBtnNewButton_7() {
+		if (btnNewButton_7 == null) {
+			btnNewButton_7 = new JButton("X");
+		}
+		return btnNewButton_7;
+	}
+	private JButton getBtnNewButton_8() {
+		if (btnNewButton_8 == null) {
+			btnNewButton_8 = new JButton("7");
+		}
+		return btnNewButton_8;
+	}
+	private JButton getBtnNewButton_9() {
+		if (btnNewButton_9 == null) {
+			btnNewButton_9 = new JButton("8");
+		}
+		return btnNewButton_9;
+	}
+	private JButton getBtnNewButton_10() {
+		if (btnNewButton_10 == null) {
+			btnNewButton_10 = new JButton("9");
+		}
+		return btnNewButton_10;
+	}
+	private JButton getBtnNewButton_11() {
+		if (btnNewButton_11 == null) {
+			btnNewButton_11 = new JButton("-");
+		}
+		return btnNewButton_11;
+	}
+	private JButton getBtnNewButton_12() {
+		if (btnNewButton_12 == null) {
+			btnNewButton_12 = new JButton("4");
+		}
+		return btnNewButton_12;
+	}
+	private JButton getBtnNewButton_13() {
+		if (btnNewButton_13 == null) {
+			btnNewButton_13 = new JButton("5");
+		}
+		return btnNewButton_13;
+	}
+	private JButton getBtnNewButton_14() {
+		if (btnNewButton_14 == null) {
+			btnNewButton_14 = new JButton("6");
+		}
+		return btnNewButton_14;
+	}
+	private JButton getBtnNewButton_15() {
+		if (btnNewButton_15 == null) {
+			btnNewButton_15 = new JButton("+");
+		}
+		return btnNewButton_15;
+	}
+	private JButton getBtnNewButton_16() {
+		if (btnNewButton_16 == null) {
+			btnNewButton_16 = new JButton("1");
+		}
+		return btnNewButton_16;
+	}
+	private JButton getBtnNewButton_17() {
+		if (btnNewButton_17 == null) {
+			btnNewButton_17 = new JButton("2");
+		}
+		return btnNewButton_17;
+	}
+	private JButton getBtnNewButton_18() {
+		if (btnNewButton_18 == null) {
+			btnNewButton_18 = new JButton("3");
+		}
+		return btnNewButton_18;
+	}
+	private JButton getBtnNewButton_19() {
+		if (btnNewButton_19 == null) {
+			btnNewButton_19 = new JButton("=");
+		}
+		return btnNewButton_19;
+	}
+	private JButton getBtnNewButton_20() {
+		if (btnNewButton_20 == null) {
+			btnNewButton_20 = new JButton("0");
+			btnNewButton_20.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		}
+		return btnNewButton_20;
+	}
+	private JButton getBtnNewButton_21() {
+		if (btnNewButton_21 == null) {
+			btnNewButton_21 = new JButton(".");
+		}
+		return btnNewButton_21;
+	}
+	private JTextField getTextField() {
+		if (textField == null) {
+			textField = new JTextField();
+			textField.setColumns(10);
+		}
+		return textField;
+	}
+}

@@ -1,0 +1,51 @@
+package calculadora;
+import java.util.Scanner;
+
+public class Calculadora {
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner (System.in);
+		System.out.println("Se encuentra inicando la calculadora...");
+		System.out.println("Solo se podran realizar operaciones basicas entre dos numeros reales.");
+		System.out.println("\nDesea realizar una operacion? si/no");
+		String continuar = teclado.nextLine();
+		double resultado = 0;
+		
+		while (continuar.equals("si")) {
+			System.out.println("\nPor favor elija el numero de la opcion a elegir: \n[1] Sumar \n[2] Restar \n[3] Multiplicar \n[4] Dividir");
+			int operacion = teclado.nextInt();
+					
+			System.out.println("\nIngrese el primer numero: ");
+			double num_1 = teclado.nextDouble();
+					
+			System.out.println("\nIngrese el segundo numero: ");
+			double num_2 = teclado.nextDouble();
+			teclado.nextLine();
+
+			switch (operacion) {
+			case 1: 
+				resultado = num_1 + num_2;
+				System.out.println("\nEl resultado de la suma de " +num_1+ " + " + num_2+ " es = " + resultado);
+				break;
+			case 2: 
+				resultado = num_1 - num_2;
+				System.out.println("\nEl resultado de la resta de " +num_1+ " - " + num_2+ " es = " + resultado);
+				break;
+			case 3: 
+				resultado = num_1 * num_2;
+				System.out.println("\nEl resultado de la multiplicacion de " +num_1+ " x " + num_2+ " es = " + resultado);
+				break;
+			case 4: 
+				resultado = num_1 / num_2;
+				System.out.println("\nEl resultado de la division de " +num_1+ " % " + num_2+ " es = " + resultado);
+				break;
+			default:
+				System.out.println("\nHubo un error en la opcion elegida. \nPor favor elija opcion 1, 2, 3 ó 4 para poder realizar la operacion.");
+				break;	
+			}
+			System.out.println("\nDesea continuar? si/no");
+			continuar = teclado.nextLine();	
+		}
+		System.out.println("\n~ Muchas gracias por utilizar nuestro servicio ~");
+		teclado.close();
+	}
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Package"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="model.Pacientes"/>
+    <fullyQualifiedTypeName name="exceptions.UsuarioNoEncontradoException"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="model.Medicos"/>
+    <fullyQualifiedTypeName name="model.Turno"/>
+    <fullyQualifiedTypeName name="model.Estado"/>
+    <fullyQualifiedTypeName name="clases.Conexion"/>
+    <fullyQualifiedTypeName name="model.Medico"/>
+    <fullyQualifiedTypeName name="model.MedicoForm"/>
+    <fullyQualifiedTypeName name="ventanas.Medicos_UsuariosForm"/>
+    <fullyQualifiedTypeName name="javax.swing.JDialog"/>
+    <fullyQualifiedTypeName name="com.toedter.calendar.JCalendar"/>
+    <fullyQualifiedTypeName name="repositorio.Conexion"/>
+    <fullyQualifiedTypeName name="model.Paciente"/>
+    <fullyQualifiedTypeName name="java.awt.Event"/>
+</qualifiedTypeNameHistroy>

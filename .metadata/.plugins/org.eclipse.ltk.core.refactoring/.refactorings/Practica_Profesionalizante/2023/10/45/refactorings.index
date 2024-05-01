@@ -1,0 +1,10 @@
+1698693438465	Delete element
+1698773257176	Rename type 'Pacientes'
+1698773832804	Encapsulate field 'idPacientes'
+1698773840335	Encapsulate field 'nombre'
+1698774102419	Move compilation unit
+1698774124596	Rename type 'Pacientes'
+1698774326908	Rename type 'Medicos'
+1698774679793	Encapsulate field 'estado'
+1698774687838	Encapsulate field 'turno'
+1698774691392	Encapsulate field 'id'

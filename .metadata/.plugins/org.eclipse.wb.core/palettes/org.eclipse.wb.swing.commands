@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+	<addCategory
+		id="category_1698873309543"
+		name="Custom"
+		description="Container for custom components"
+		visible="true"
+		open="true"/>
+	<addComponent
+		id="custom_1698873309542"
+		name="JCalendar"
+		description="Creates com.toedter.calendar.JCalendar component."
+		visible="true"
+		class="com.toedter.calendar.JCalendar"
+		category="category_1698873309543"/>
+</commands>

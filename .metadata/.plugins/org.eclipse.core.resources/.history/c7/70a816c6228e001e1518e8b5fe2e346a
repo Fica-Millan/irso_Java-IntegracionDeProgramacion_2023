@@ -1,0 +1,73 @@
+/*Crear una matriz de 8 x 8 guardar la suma, el valor máximo y el valor mínimo, los números tienen que ser enteros entre los números -100 y 10 ingresado por teclado, la matriz con POO.*/
+
+package matrices;
+import java.util.Scanner;
+
+public class Ejercicio_05 {
+
+	    private int[][] matriz;
+	    private int suma;
+	    private int valorMaximo;
+	    private int valorMinimo;
+
+	    // Constructor para inicializar la matriz con dimensiones dadas
+	    public Ejercicio_05(int filas, int columnas) {
+	        this.matriz = new int[filas][columnas];
+	        this.suma = 0;
+	        this.valorMaximo = Integer.MIN_VALUE;
+	        this.valorMinimo = Integer.MAX_VALUE;
+	    }
+
+	    // Método para cargar valores en la matriz
+	    public void cargarValores() {
+	        Scanner scanner = new Scanner(System.in);
+
+	        for (int i = 0; i < matriz.length; i++) {
+	            for (int j = 0; j < matriz[i].length; j++) {
+	                System.out.print("Ingrese un número entre -100 y 10 para la posición [" + i + "][" + j + "]: ");
+	                int numero = scanner.nextInt();
+
+	                // Validar que el número esté en el rango especificado
+	                while (numero < -100 || numero > 10) {
+	                    System.out.println("Error: Ingrese un número entre -100 y 10.");
+	                    System.out.print("Ingrese un número para la posición [" + i + "][" + j + "]: ");
+	                    numero = scanner.nextInt();
+	                }
+
+	                matriz[i][j] = numero;
+
+	                // Actualizar la suma, valor máximo y valor mínimo
+	                suma += numero;
+	                valorMaximo = Math.max(valorMaximo, numero);
+	                valorMinimo = Math.min(valorMinimo, numero);
+	            }
+	        }
+
+	        // Cerrar el scanner al finalizar la entrada de datos
+	        scanner.close();
+	    }
+
+	    // Método para mostrar la información de la matriz y los cálculos
+	    public void mostrarInformacion() {
+	        System.out.println("Matriz:");
+	        for (int i = 0; i < matriz.length; i++) {
+	            for (int j = 0; j < matriz[i].length; j++) {
+	                System.out.print(matriz[i][j] + "\t");
+	            }
+	            System.out.println();
+	        }
+
+	        System.out.println("Suma: " + suma);
+	        System.out.println("Valor Máximo: " + valorMaximo);
+	        System.out.println("Valor Mínimo: " + valorMinimo);
+	    }
+
+	    public static void main(String[] args) {
+	        // Crear una matriz 8x8 y cargar valores
+	    	Ejercicio_05 matrizOperaciones = new Ejercicio_05(8, 8);
+	        matrizOperaciones.cargarValores();
+
+	        // Mostrar la información de la matriz y los cálculos
+	        matrizOperaciones.mostrarInformacion();
+	    }
+	}
